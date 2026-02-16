@@ -1,0 +1,218 @@
+:root {
+    --bg-color: #0a0e14;
+    --card-bg: #161b22;
+    --neon-blue: #8ecae6;
+    --neon-glow: #219ebc;
+    --text-color: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+nav {
+    padding: 20px 5%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(142, 202, 230, 0.2);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span { color: var(--neon-blue); }
+
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.neon-text {
+    font-size: 3rem;
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-glow), 0 0 20px var(--neon-glow);
+    margin-bottom: 10px;
+}
+
+.quote {
+    font-style: italic;
+    opacity: 0.8;
+    margin-bottom: 30px;
+}
+
+.profile-frame {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(45deg, var(--neon-blue), transparent);
+    box-shadow: 0 0 20px rgba(142, 202, 230, 0.3);
+}
+
+.profile-frame img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.section {
+    padding: 50px 10%;
+}
+
+.neon-border {
+    display: inline-block;
+    border-left: 4px solid var(--neon-blue);
+    padding-left: 15px;
+    margin-bottom: 30px;
+}
+
+.card, .award-card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(142, 202, 230, 0.1);
+    transition: 0.3s;
+}
+
+.award-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(33, 158, 188, 0.2);
+    border-color: var(--neon-blue);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.rank {
+    display: block;
+    color: var(--neon-blue);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.gpax span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--neon-blue);
+}
+
+.contact {
+    padding: 80px 10%;
+    text-align: center;
+    background: linear-gradient(to top, #161b22, transparent);
+}
+
+.contact-info a {
+    color: var(--neon-blue);
+    text-decoration: none;
+}
+
+
+
+
+
+
+/* เพิ่มเติมจาก CSS เดิมนะคะ */
+
+.cert-img-container {
+    width: 100%;
+    height: 180px; /* ปรับความสูงได้ตามชอบค่ะ */
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(142, 202, 230, 0.3);
+}
+
+.cert-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ให้รูปพอดีกับกรอบ */
+    transition: transform 0.5s ease, filter 0.5s ease;
+    filter: grayscale(40%); /* ทำรูปซีดนิดๆ ให้ดูคลาสสิก */
+}
+
+.award-card:hover .cert-img {
+    transform: scale(1.1); /* ซูมรูปเมื่อชี้ */
+    filter: grayscale(0%); /* ให้สีกลับมาสดใส */
+}
+
+.award-card {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* แถม: เอฟเฟกต์แสงวิ่งผ่านรูป (Shine Effect) */
+.award-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(30deg);
+    transition: 0.5s;
+}
+
+/* เพิ่มเติมจาก CSS เดิมนะคะ */
+
+.cert-img-container {
+    width: 100%;
+    height: 180px; /* ปรับความสูงได้ตามชอบค่ะ */
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(142, 202, 230, 0.3);
+}
+
+.cert-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ให้รูปพอดีกับกรอบ */
+    transition: transform 0.5s ease, filter 0.5s ease;
+    filter: grayscale(40%); /* ทำรูปซีดนิดๆ ให้ดูคลาสสิก */
+}
+
+.award-card:hover .cert-img {
+    transform: scale(1.1); /* ซูมรูปเมื่อชี้ */
+    filter: grayscale(0%); /* ให้สีกลับมาสดใส */
+}
+
+.award-card {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* แถม: เอฟเฟกต์แสงวิ่งผ่านรูป (Shine Effect) */
+.award-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(30deg);
+    transition: 0.5s;
+}
+
+.award-card:hover::after {
+    left: 120%;
+}
